@@ -153,7 +153,12 @@ func Register(worker *Process) {
 }
 
 // GetCommand 获取主命令管理
-func GetCommand() *Daemon {
+func GetCommand() *cobra.Command {
+	return command.command
+}
+
+// GetRootCommand  获取主命令管理
+func GetRootCommand() *Daemon {
 	return command
 }
 
